@@ -2,9 +2,13 @@
 #
 #   haskell-ci '--jobs-selection=any' 'cabal.project'
 #
+# To regenerate the script (for example after adjusting tested-with) run
+#
+#   haskell-ci regenerate
+#
 # For more information, see https://github.com/haskell-CI/haskell-ci
 #
-# version: 0.9.20200402
+# version: 0.11.20210111
 #
 version: ~> 1.0
 language: c
@@ -30,28 +34,28 @@ before_cache:
 jobs:
   include:
     - compiler: ghc-8.10.1
-      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.10.1","cabal-install-3.2"]}}
+      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.10.1","cabal-install-3.4"]}}
       os: linux
     - compiler: ghc-8.8.3
-      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.8.3","cabal-install-3.0"]}}
+      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.8.3","cabal-install-3.4"]}}
       os: linux
     - compiler: ghc-8.6.5
-      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.6.5","cabal-install-3.0"]}}
+      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.6.5","cabal-install-3.4"]}}
       os: linux
     - compiler: ghc-8.4.4
-      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.4.4","cabal-install-3.0"]}}
+      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.4.4","cabal-install-3.4"]}}
       os: linux
     - compiler: ghc-8.2.2
-      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.2.2","cabal-install-3.0"]}}
+      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.2.2","cabal-install-3.4"]}}
       os: linux
     - compiler: ghc-8.0.2
-      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.0.2","cabal-install-3.0"]}}
+      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-8.0.2","cabal-install-3.4"]}}
       os: linux
     - compiler: ghc-7.10.3
-      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-7.10.3","cabal-install-3.0"]}}
+      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-7.10.3","cabal-install-3.4"]}}
       os: linux
     - compiler: ghc-7.8.4
-      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-7.8.4","cabal-install-3.0"]}}
+      addons: {"apt":{"sources":[{"sourceline":"deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main","key_url":"https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x063dab2bdc0b3f9fcebc378bff3aeacef6f88286"}],"packages":["ghc-7.8.4","cabal-install-3.4"]}}
       os: linux
 before_install:
   - HC=$(echo "/opt/$CC/bin/ghc" | sed 's/-/\//')
@@ -74,7 +78,7 @@ before_install:
   - |
     echo "verbose: normal +nowrap +markoutput"          >> $CABALHOME/config
     echo "remote-build-reporting: anonymous"            >> $CABALHOME/config
-    echo "write-ghc-environment-files: always"          >> $CABALHOME/config
+    echo "write-ghc-environment-files: never"           >> $CABALHOME/config
     echo "remote-repo-cache: $CABALHOME/packages"       >> $CABALHOME/config
     echo "logs-dir:          $CABALHOME/logs"           >> $CABALHOME/config
     echo "world-file:        $CABALHOME/world"          >> $CABALHOME/config
@@ -100,21 +104,21 @@ install:
   - rm -rf cabal.project cabal.project.local cabal.project.freeze
   - touch cabal.project
   - |
-    echo "packages: cborg" >> cabal.project
+    if [ $((HCNUMVER >= 80000)) -ne 0 ] ; then echo "packages: cborg" >> cabal.project ; fi
     echo "packages: cbor-tool" >> cabal.project
     echo "packages: serialise" >> cabal.project
-    if [ $HCNUMVER -ge 71000 ] ; then echo "packages: binary-serialise-cbor" >> cabal.project ; fi
+    if [ $((HCNUMVER >= 71000)) -ne 0 ] ; then echo "packages: binary-serialise-cbor" >> cabal.project ; fi
     echo "packages: cborg-json" >> cabal.project
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package cborg' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package cbor-tool' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package serialise' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package binary-serialise-cbor' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package cborg-json' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package cborg' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package cbor-tool' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package serialise' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package binary-serialise-cbor' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package cborg-json' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
   - |
   - "for pkg in $($HCPKG list --simple-output); do echo $pkg | sed 's/-[^-]*$//' | (grep -vE -- '^(binary-serialise-cbor|cbor-tool|cborg|cborg-json|serialise)$' || true) | sed 's/^/constraints: /' | sed 's/$/ installed/' >> cabal.project.local; done"
   - cat cabal.project || true
@@ -147,21 +151,21 @@ script:
   - rm -rf cabal.project cabal.project.local cabal.project.freeze
   - touch cabal.project
   - |
-    echo "packages: ${PKGDIR_cborg}" >> cabal.project
+    if [ $((HCNUMVER >= 80000)) -ne 0 ] ; then echo "packages: ${PKGDIR_cborg}" >> cabal.project ; fi
     echo "packages: ${PKGDIR_cbor_tool}" >> cabal.project
     echo "packages: ${PKGDIR_serialise}" >> cabal.project
-    if [ $HCNUMVER -ge 71000 ] ; then echo "packages: ${PKGDIR_binary_serialise_cbor}" >> cabal.project ; fi
+    if [ $((HCNUMVER >= 71000)) -ne 0 ] ; then echo "packages: ${PKGDIR_binary_serialise_cbor}" >> cabal.project ; fi
     echo "packages: ${PKGDIR_cborg_json}" >> cabal.project
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package cborg' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package cbor-tool' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package serialise' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package binary-serialise-cbor' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
-  - if [ $HCNUMVER -ge 80000 ] ; then echo 'package cborg-json' >> cabal.project ; fi
-  - "if [ $HCNUMVER -ge 80000 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package cborg' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package cbor-tool' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package serialise' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package binary-serialise-cbor' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
+  - if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo 'package cborg-json' >> cabal.project ; fi
+  - "if [ $((HCNUMVER >= 80200)) -ne 0 ] ; then echo '  ghc-options: -Werror=missing-methods' >> cabal.project ; fi"
   - |
   - "for pkg in $($HCPKG list --simple-output); do echo $pkg | sed 's/-[^-]*$//' | (grep -vE -- '^(binary-serialise-cbor|cbor-tool|cborg|cborg-json|serialise)$' || true) | sed 's/^/constraints: /' | sed 's/$/ installed/' >> cabal.project.local; done"
   - cat cabal.project || true
@@ -171,14 +175,14 @@ script:
   - ${CABAL} v2-build $WITHCOMPILER --disable-tests --disable-benchmarks all
   # Building with tests and benchmarks...
   # build & run tests, build benchmarks
-  - ${CABAL} v2-build $WITHCOMPILER ${TEST} ${BENCH} all
+  - ${CABAL} v2-build $WITHCOMPILER ${TEST} ${BENCH} all --write-ghc-environment-files=always
   # Testing...
-  - ${CABAL} v2-test $WITHCOMPILER ${TEST} ${BENCH} all
+  - ${CABAL} v2-test $WITHCOMPILER ${TEST} ${BENCH} all --test-show-details=direct
   # cabal check...
-  - (cd ${PKGDIR_cborg} && ${CABAL} -vnormal check)
+  - if [ $((HCNUMVER >= 80000)) -ne 0 ] ; then (cd ${PKGDIR_cborg} && ${CABAL} -vnormal check) ; fi
   - (cd ${PKGDIR_cbor_tool} && ${CABAL} -vnormal check)
   - (cd ${PKGDIR_serialise} && ${CABAL} -vnormal check)
-  - if [ $HCNUMVER -ge 71000 ] ; then (cd ${PKGDIR_binary_serialise_cbor} && ${CABAL} -vnormal check) ; fi
+  - if [ $((HCNUMVER >= 71000)) -ne 0 ] ; then (cd ${PKGDIR_binary_serialise_cbor} && ${CABAL} -vnormal check) ; fi
   - (cd ${PKGDIR_cborg_json} && ${CABAL} -vnormal check)
   # haddock...
   - ${CABAL} v2-haddock $WITHCOMPILER --with-haddock $HADDOCK ${TEST} ${BENCH} all
@@ -186,5 +190,5 @@ script:
   - rm -f cabal.project.local
   - ${CABAL} v2-build $WITHCOMPILER --disable-tests --disable-benchmarks all
 
-# REGENDATA ("0.9.20200402",["--jobs-selection=any","cabal.project"])
+# REGENDATA ("0.11.20210111",["--jobs-selection=any","cabal.project"])
 # EOF
