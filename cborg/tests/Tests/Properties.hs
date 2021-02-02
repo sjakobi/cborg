@@ -64,10 +64,6 @@ import           Tests.Term
                    ( fromRefTerm, toRefTerm, eqTerm, canonicaliseTerm )
 import           Tests.Util
 
-#if !MIN_VERSION_base(4,8,0)
-import           Control.Applicative
-#endif
-
 
 -- | The CBOR implementation and its reference implementation satisfy all the
 -- properties implied in the following commuting diagram.

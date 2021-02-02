@@ -36,9 +36,6 @@ import qualified Control.Monad.Fail as Fail
 import           Control.Monad                       (replicateM_)
 import           GHC.Int (Int64)
 import           Numeric
-#if !MIN_VERSION_base(4,8,0)
-import           Control.Applicative
-#endif
 
 --------------------------------------------------------------------------------
 

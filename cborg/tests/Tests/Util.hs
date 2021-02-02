@@ -15,10 +15,6 @@ import           Data.Word
 
 import           Test.Tasty.QuickCheck
 
-#if !MIN_VERSION_base(4,8,0)
-import           Control.Applicative
-#endif
-
 -- | Generate all 2-splits of a serialised CBOR value.
 splits2 :: BSL.ByteString -> [BSL.ByteString]
 splits2 bs = zipWith (\a b -> BSL.fromChunks [a,b]) (BS.inits sbs) (BS.tails sbs)

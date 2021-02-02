@@ -107,7 +107,7 @@ import           Foreign.C (CUShort)
 
 import qualified Numeric.Half as Half
 
-#if !defined(HAVE_BYTESWAP_PRIMOPS) || !defined(MEM_UNALIGNED_OPS) || !defined(OPTIMIZE_GMP)
+#if !defined(MEM_UNALIGNED_OPS) || !defined(OPTIMIZE_GMP)
 import           Data.Bits ((.|.), unsafeShiftL)
 #endif
 
@@ -144,10 +144,9 @@ grabWord64 :: Ptr () -> Word64
 grabWord8 (Ptr ip#) = W8# (indexWord8OffAddr# ip# 0#)
 
 -- ... but the remaining cases arent
-#if defined(HAVE_BYTESWAP_PRIMOPS) && \
-    defined(MEM_UNALIGNED_OPS) && \
+#if defined(MEM_UNALIGNED_OPS) && \
    !defined(WORDS_BIGENDIAN)
--- On x86 machines with GHC 7.10, we have byteswap primitives
+-- On x86 machines, we have byteswap primitives
 -- available to make this conversion very fast.
 
 grabWord16 (Ptr ip#) = W16# (narrow16Word# (byteSwap16# (indexWord16OffAddr# ip# 0#)))

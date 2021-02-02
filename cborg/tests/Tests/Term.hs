@@ -32,9 +32,6 @@ import           Tests.Reference.Generators
                    ( floatToWord, doubleToWord, canonicalNaN
                    , HalfSpecials(..), FloatSpecials(..), DoubleSpecials(..) )
 
-#if !MIN_VERSION_base(4,8,0)
-import           Control.Applicative
-#endif
 import           Control.Exception (throw)
 
 
