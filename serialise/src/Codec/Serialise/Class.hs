@@ -530,10 +530,12 @@ instance Serialise a => Serialise (Semigroup.Last a) where
   encode = encode . Semigroup.getLast
   decode = fmap Semigroup.Last decode
 
+#if !MIN_VERSION_base(4,16,0)
 -- | @since 0.2.0.0
 instance Serialise a => Serialise (Semigroup.Option a) where
   encode = encode . Semigroup.getOption
   decode = fmap Semigroup.Option decode
+#endif
 
 instance Serialise a => Serialise (Semigroup.WrappedMonoid a) where
   encode = encode . Semigroup.unwrapMonoid

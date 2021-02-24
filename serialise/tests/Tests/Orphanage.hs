@@ -169,9 +169,11 @@ instance Arbitrary a => Arbitrary (Semigroup.Last a) where
   arbitrary = fmap Semigroup.Last arbitrary
   shrink = map Semigroup.Last . shrink . Semigroup.getLast
 
+#if !MIN_VERSION_base(4,16,0)
 instance Arbitrary a => Arbitrary (Semigroup.Option a) where
   arbitrary = fmap Semigroup.Option arbitrary
   shrink = map Semigroup.Option . shrink . Semigroup.getOption
+#endif
 
 instance Arbitrary a => Arbitrary (Semigroup.WrappedMonoid a) where
   arbitrary = fmap Semigroup.WrapMonoid arbitrary

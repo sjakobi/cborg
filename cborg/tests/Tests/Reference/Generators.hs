@@ -27,6 +27,7 @@ module Tests.Reference.Generators (
   , wordToDouble
   ) where
 
+import           Data.Kind (Type)
 import           Data.Word
 import           Numeric (showHex)
 import           Numeric.Half as Half
@@ -231,7 +232,7 @@ class (RealFloat n, Integral (FloatWord n), Show (FloatWord n),
   exponentBits    :: Proxy n -> Int
   significandBits :: Proxy n -> Int
 
-  type FloatWord n :: *
+  type FloatWord n :: Type
   wordToFloating  :: FloatWord n -> n
 --floatingToWord  :: n -> FloatWord n
 
